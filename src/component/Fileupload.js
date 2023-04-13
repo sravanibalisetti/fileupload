@@ -1,9 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
+import axios from 'axios'
 const Fileupload=()=> {
  	 const [selectedFile, setSelectedFile] = useState();
      const[isSelected, setIsSelected]= useState(false);
+     console.log(selectedFile);
+
+     let data={
+        files:selectedFile,
+      question: "sravani"
+    }
+
+     useEffect(()=>{
+        axios.post("https://openaiqnaapi.azurewebsites.net/upload-files",data).then((response) => {
+          selectedFile(response.data)
+          console.log(response)
+        });
+      },[])
+
  const handleFileUpload = (event) => {
     		setSelectedFile(event.target.files[0]);
+            console.log(event.target.files[0])
     		setIsSelected(true);
     	};
 //onsubmit:
