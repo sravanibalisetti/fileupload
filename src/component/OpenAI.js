@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-
 function OpenAI() {
     const [key,setKey]=useState();
 const [id,setId]=useState();
 const [endpoint,setEndpoint]=useState();
   return (
     <div className=''>
-        {/* <h4>hello</h4> */}
     <div className='head'>
         Azure OpenAI Key
         </div>
@@ -31,5 +29,4 @@ const [endpoint,setEndpoint]=useState();
     </div>
   )
 }
-
 export default OpenAI

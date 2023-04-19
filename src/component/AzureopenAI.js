@@ -1,11 +1,18 @@
+import { Tabs } from 'antd';
 import React, { useState } from 'react';
+import Tab from './Tab';
 function AzureopenAI() {
     const [key,setKey]=useState();
     const [id,setId]=useState();
     const [endpoint,setEndpoint]=useState();
-
+    const [activeTabKey, setActiveTabKey] = useState();
+    const handleTabChange = (key) => {
+        setActiveTabKey(key);
+      };
   return (
     <div className=''>
+      <h4>hello</h4>
+   
         <div className='head'>
             Azure OpenAI Key
             </div>
@@ -27,6 +34,7 @@ function AzureopenAI() {
        <div className='btn'>
        <button >save</button>
        </div>      
+     
         </div>
   )
 }

@@ -5,11 +5,11 @@ import miracle26 from './miracle26.png';
     <>
    <div className="header"> 
    <div className='mir'> 
-        <img  src={miracle26} alt="imag"/>
+        <img style={{height:"3.2rem"}} src={miracle26} alt="imag"/>
         </div>
-        <center className='task' >
+        <div className='task' >
               <h4>  Document Understanding </h4>
-             </center>
+             </div>
         
   </div>
   </>
